@@ -1330,6 +1330,13 @@ config DO_EXIT_WDOG
 	 exit_files() never returning due to a deadlock in the close path of a
 	 driver.  It might help (or hurt) in other cases as well.
 
+config PANIC_ON_DATA_CORRUPTION
+	bool "Cause a Kernel Panic When Data Corruption is detected"
+	help
+	 Select this option to upgrade warnings for potentially
+	 recoverable data corruption scenarios to system-halting panics,
+	 for easier detection and debug.
+
 source "samples/Kconfig"
 
 source "lib/Kconfig.kgdb"
